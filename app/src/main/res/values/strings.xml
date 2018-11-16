@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Chemistry</string>
+    <string name="chemistry">Chemistry</string>
+    <string name="signup">Sign Up</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="age">Age</string>
+    <string name="email">E-mail address</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="done">Done</string>
+    <string name="busy">Busy!</string>
+    <string name="mood">Mood:</string>
+    <string name="detect">Detect Mood</string>
+    <string name="onlyfriends">Only Friends</string>
+    <string name="friendsoffriends">Friends of Friends</string>
+    <string name="explore">Explore!</string>
+    <string name="suggest">Suggest:</string>
+    <string name="search">Find Me A Friend!</string>
+    <string name="findfriend">Find A Friend</string>
+    <string name="menu">Main Menu</string>
+    <string name="find_friend" >Find A Friend</string>
+    <string name="interest">Interests</string>
+    <string name="friends">Friends</string>
+
+    <string-array name="moods">
+        <item>Fun-loving</item>
+        <item>Adventurous</item>
+        <item>Hungry!</item>
+        <item>Sad</item>
+        <item>Philosophical</item>
+    </string-array>
+
+</resources>
