@@ -2,7 +2,6 @@ package com.example.juniordesign.chemistry;
 
 public class User {
 
-    String id;
     String firstName;
     String lastName;
     int age;
@@ -14,8 +13,7 @@ public class User {
 
     }
 
-    public User(String id, String firstName, String lastName, int age, String email, String phone) {
-        this.id = id;
+    public User(String firstName, String lastName, int age, String email, String phone) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
