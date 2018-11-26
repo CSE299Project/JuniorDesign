@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="0.206" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/detectmoodbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.32999998" />
 
     <RadioButton
-        android:id="@+id/radioButton"
+        android:id="@+id/onlyfrnds_rb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -75,11 +75,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/detectmoodbutton"
         app:layout_constraintVertical_bias="0.29000002" />
 
     <RadioButton
-        android:id="@+id/radioButton2"
+        android:id="@+id/foff_rb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -94,11 +94,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/onlyfrnds_rb"
         app:layout_constraintVertical_bias="0.0" />
 
     <RadioButton
-        android:id="@+id/radioButton3"
+        android:id="@+id/explore_rb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -113,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton2"
+        app:layout_constraintTop_toBottomOf="@+id/foff_rb"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -129,7 +129,7 @@
         android:text="@string/suggest"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioButton"
+        app:layout_constraintBottom_toTopOf="@+id/onlyfrnds_rb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,7 +137,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/findfriendbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

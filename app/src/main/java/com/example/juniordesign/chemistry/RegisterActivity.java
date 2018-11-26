@@ -9,7 +9,6 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -33,10 +32,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        email= (EditText) findViewById(R.id.editText6);
-        password= (EditText) findViewById(R.id.editText7);
-        confirmPass= (EditText) findViewById(R.id.editText7);
-        buttonAdd= (Button) findViewById(R.id.button9);
+        email= (EditText) findViewById(R.id.email_etxt);
+        password= (EditText) findViewById(R.id.password_etext);
+        confirmPass= (EditText) findViewById(R.id.password_etext);
+        buttonAdd= (Button) findViewById(R.id.registerdonebutton);
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override

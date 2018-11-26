@@ -21,8 +21,8 @@ public class MenuActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        Button logOutButton = (Button) findViewById(R.id.button8);
-        Button friends= (Button) findViewById(R.id.button7);
+        Button logOutButton = (Button) findViewById(R.id.logoutbutton);
+        Button friends= (Button) findViewById(R.id.friendsbutton);
 
 
         logOutButton.setOnClickListener(new View.OnClickListener() {
