@@ -18,9 +18,12 @@
     <string name="search">Find Me A Friend!</string>
     <string name="findfriend">Find A Friend</string>
     <string name="menu">Main Menu</string>
-    <string name="find_friend" >Find A Friend</string>
+    <string name="find_friend">Find A Friend</string>
     <string name="interest">Interests</string>
     <string name="friends">Friends</string>
+    <string name="password">Password</string>
+    <string name="logOut">Log Out</string>
+    <string name="confirmPass">Confirm Password</string>
 
     <string-array name="moods">
         <item>Fun-loving</item>
