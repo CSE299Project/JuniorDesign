@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -34,7 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         email= (EditText) findViewById(R.id.email_etxt);
         password= (EditText) findViewById(R.id.password_etext);
-        confirmPass= (EditText) findViewById(R.id.password_etext);
+        confirmPass= (EditText) findViewById(R.id.cpassword_etext);
         buttonAdd= (Button) findViewById(R.id.registerdonebutton);
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
 
-            if(!password.equals(confirmPass)){
+            if(!password1.equals(password2)){
                 confirmPass.setError("Password didn't match");
                 confirmPass.requestFocus();
                 return;
@@ -87,6 +88,10 @@ public class RegisterActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         startActivity(new Intent(RegisterActivity.this, SignUpActivity.class));
+                    }
+                    else
+                    {
+                        Toast.makeText(RegisterActivity.this, "unsuccessful", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

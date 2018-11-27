@@ -23,6 +23,8 @@ public class MenuActivity extends AppCompatActivity {
 
         Button logOutButton = (Button) findViewById(R.id.logoutbutton);
         Button friends= (Button) findViewById(R.id.friendsbutton);
+        Button findfriend = (Button) findViewById(R.id.findfriendbutton);
+
 
 
         logOutButton.setOnClickListener(new View.OnClickListener() {
@@ -42,5 +44,21 @@ public class MenuActivity extends AppCompatActivity {
                 Toast.makeText(MenuActivity.this, "User id is: "+id, Toast.LENGTH_SHORT).show();
             }
         });
+
+        findfriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuActivity.this, FindActivity.class));
+            }
+        });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent home = new Intent(Intent.ACTION_MAIN);
+        home.addCategory(Intent.CATEGORY_HOME);
+        home.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(home);
     }
 }
