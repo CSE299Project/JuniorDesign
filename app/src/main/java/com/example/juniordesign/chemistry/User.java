@@ -8,7 +8,6 @@ public class User {
     String email;
     String phone;
 
-
     public User(){
 
     }
@@ -19,5 +18,25 @@ public class User {
         this.age = age;
         this.email = email;
         this.phone = phone;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 }

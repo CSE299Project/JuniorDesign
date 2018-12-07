@@ -33,10 +33,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        email= (EditText) findViewById(R.id.editText6);
-        password= (EditText) findViewById(R.id.editText7);
-        confirmPass= (EditText) findViewById(R.id.editText7);
-        buttonAdd= (Button) findViewById(R.id.button9);
+        email= (EditText) findViewById(R.id.email_etxt);
+        password= (EditText) findViewById(R.id.password_etext);
+        confirmPass= (EditText) findViewById(R.id.cpassword_etext);
+        buttonAdd= (Button) findViewById(R.id.registerdonebutton);
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
 
-            if(!password.equals(confirmPass)){
+            if(!password1.equals(password2)){
                 confirmPass.setError("Password didn't match");
                 confirmPass.requestFocus();
                 return;
@@ -88,6 +88,10 @@ public class RegisterActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         startActivity(new Intent(RegisterActivity.this, SignUpActivity.class));
+                    }
+                    else
+                    {
+                        Toast.makeText(RegisterActivity.this, "unsuccessful", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

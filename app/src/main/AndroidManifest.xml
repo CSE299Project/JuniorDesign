@@ -19,7 +19,10 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".FindActivity" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".FriendsActivity1" />
+        <activity android:name=".AddFriendActivity" />
+        <activity android:name=".FriendListActivity"></activity>
     </application>
 
 </manifest>

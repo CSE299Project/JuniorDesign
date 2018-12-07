@@ -7,7 +7,7 @@
     tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/startedtview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -16,16 +16,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/signup"
+        android:text="@string/getstarted"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.061" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/email_etxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -41,11 +42,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/startedtview"
         app:layout_constraintVertical_bias="0.19" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/password_etext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -59,11 +60,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6"
+        app:layout_constraintTop_toBottomOf="@+id/email_etxt"
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/cpassword_etext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -80,11 +81,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7"
+        app:layout_constraintTop_toBottomOf="@+id/password_etext"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/registerdonebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -97,6 +98,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText8"
+        app:layout_constraintTop_toBottomOf="@+id/cpassword_etext"
         app:layout_constraintVertical_bias="0.465" />
 </android.support.constraint.ConstraintLayout>

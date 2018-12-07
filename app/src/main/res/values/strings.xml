@@ -17,13 +17,16 @@
     <string name="suggest">Suggest:</string>
     <string name="search">Find Me A Friend!</string>
     <string name="findfriend">Find A Friend</string>
-    <string name="menu">Main Menu</string>
+    <string name="menu">Menu</string>
     <string name="find_friend">Find A Friend</string>
     <string name="interest">Interests</string>
     <string name="friends">Friends</string>
     <string name="password">Password</string>
     <string name="logOut">Log Out</string>
     <string name="confirmPass">Confirm Password</string>
+    <string name="getstarted">Let\'s get started</string>
+    <string name="addNewFriend">Add a New Friend</string>
+    <string name="myFriends">My Friends</string>
 
     <string-array name="moods">
         <item>Fun-loving</item>
