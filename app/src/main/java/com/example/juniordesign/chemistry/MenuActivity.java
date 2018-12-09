@@ -52,7 +52,6 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(new Intent(MenuActivity.this, FindActivity.class));
             }
         });
-
     }
 
     @Override
