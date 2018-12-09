@@ -25,6 +25,8 @@
     <string name="logOut">Log Out</string>
     <string name="confirmPass">Confirm Password</string>
     <string name="getstarted">Let\'s get started</string>
+    <string name="addNewFriend">Add a New Friend</string>
+    <string name="myFriends">My Friends</string>
 
     <string-array name="moods">
         <item>Fun-loving</item>

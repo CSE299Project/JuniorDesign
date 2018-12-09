@@ -30,8 +30,8 @@ public class MenuActivity extends AppCompatActivity {
         logOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.signOut();
-                startActivity(new Intent(MenuActivity.this, MainActivity.class));
+//                mAuth.signOut();
+//                startActivity(new Intent(MenuActivity.this, MainActivity.class));
             }
         });
 
@@ -39,9 +39,10 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Just for checking the currentUser id
-                FirebaseUser user= mAuth.getCurrentUser();
-                String id= user.getUid();
-                Toast.makeText(MenuActivity.this, "User id is: "+id, Toast.LENGTH_SHORT).show();
+//                FirebaseUser user= mAuth.getCurrentUser();
+//                String id= user.getUid();
+//                Toast.makeText(MenuActivity.this, "User id is: "+id, Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MenuActivity.this,FriendsActivity1.class));
             }
         });
 
@@ -51,7 +52,6 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(new Intent(MenuActivity.this, FindActivity.class));
             }
         });
-
     }
 
     @Override
