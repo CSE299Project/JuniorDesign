@@ -16,6 +16,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -25,6 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button buttonAdd;
 
     private FirebaseAuth mAuth;
+    private DatabaseReference UsersRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mAuth = FirebaseAuth.getInstance();
+        UsersRef= FirebaseDatabase.getInstance().getReference().child("users");
 
         email= (EditText) findViewById(R.id.email_etxt);
         password= (EditText) findViewById(R.id.password_etext);
@@ -51,6 +56,10 @@ public class RegisterActivity extends AppCompatActivity {
         super.onStart();
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
+        String currentUserId=currentUser.getUid();
+        String deviceToken= FirebaseInstanceId.getInstance().getToken();
+
+        UsersRef.child(currentUserId).child("device_token").setValue(deviceToken);
 
         if(currentUser != null){
             startActivity(new Intent(RegisterActivity.this,MenuActivity.class));
