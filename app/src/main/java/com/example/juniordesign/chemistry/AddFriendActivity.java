@@ -43,15 +43,14 @@ public class AddFriendActivity extends AppCompatActivity {
         UserList=(RecyclerView) findViewById(R.id.user_list);
         UserList.setHasFixedSize(true);
         UserList.setLayoutManager(new LinearLayoutManager(this));
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-//        FirebaseUser user= mAuth.getCurrentUser();
-//        final String currentUser_id= user.getUid();
+        FirebaseUser user= mAuth.getCurrentUser();
+        final String currentUser_id= user.getUid();
 
         FirebaseRecyclerOptions<User> options = new FirebaseRecyclerOptions.Builder<User>().setQuery(mDatabase, User.class).build();
 

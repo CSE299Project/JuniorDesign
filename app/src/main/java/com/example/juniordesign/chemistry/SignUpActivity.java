@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -62,6 +63,10 @@ public class SignUpActivity extends AppCompatActivity {
             String email = mAuth.getCurrentUser().getEmail();
             User user= new User(fname, lname,age,email,phone1);
             databaseUsers.child(id).setValue(user);
+
+            String deviceToken= FirebaseInstanceId.getInstance().getToken();
+
+            databaseUsers.child(id).child("device_token").setValue(deviceToken);
 
             Toast.makeText(this,"User added successfully",Toast.LENGTH_LONG).show();
 

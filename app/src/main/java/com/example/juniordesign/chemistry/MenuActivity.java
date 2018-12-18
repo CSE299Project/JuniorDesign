@@ -3,6 +3,7 @@ package com.example.juniordesign.chemistry;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -21,19 +22,11 @@ public class MenuActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        Button logOutButton = (Button) findViewById(R.id.logoutbutton);
         Button friends= (Button) findViewById(R.id.friendsbutton);
         Button findfriend = (Button) findViewById(R.id.findfriendbutton);
+        Button status = (Button) findViewById(R.id.status);
+        Button interest= (Button) findViewById(R.id.interestsbutton);
 
-
-
-        logOutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                mAuth.signOut();
-//                startActivity(new Intent(MenuActivity.this, MainActivity.class));
-            }
-        });
 
         friends.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +43,20 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MenuActivity.this, FindActivity.class));
+            }
+        });
+
+        status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this,StatusActivity.class));
+            }
+        });
+
+        interest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this,InterestMenuActivity.class));
             }
         });
     }

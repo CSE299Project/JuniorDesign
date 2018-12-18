@@ -1,5 +1,7 @@
 package com.example.juniordesign.chemistry;
 
+import java.util.ArrayList;
+
 public class User {
 
     String firstName;
@@ -7,6 +9,9 @@ public class User {
     int age;
     String email;
     String phone;
+    String currentMood;
+    ArrayList<String> interests;
+
 
     public User(){
 
@@ -18,6 +23,15 @@ public class User {
         this.age = age;
         this.email = email;
         this.phone = phone;
+    }
+
+
+    public ArrayList<String> getInterestList() {
+        return interests;
+    }
+
+    public void setInterestList(ArrayList<String> interests) {
+        this.interests = interests;
     }
 
     public String getFirstName() {
@@ -38,5 +52,13 @@ public class User {
 
     public String getPhone() {
         return phone;
+    }
+
+    public String getCurrentMood() {
+        return currentMood;
+    }
+
+    public void setCurrentMood(String currentMood) {
+        this.currentMood = currentMood;
     }
 }
